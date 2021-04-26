@@ -1,6 +1,5 @@
 <template>
   <div>
-    Home
           <ingreso />
   </div>
 </template>

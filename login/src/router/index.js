@@ -4,13 +4,15 @@ import Home from '../views/Home.vue'
 import Acceder from '../views/Aut/Acceder.vue'
 import Registrarse from '../views/Aut/Registrarse.vue'
 import dash from '../views/dash.vue'
+import Acceso from '../components/Acceso.vue'
+import subirProyecto from '../views/subirProyecto.vue'
 import firebase from 'firebase'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
+    path: '/Home',
     name: 'Home',
     component: Home
   },
@@ -18,6 +20,11 @@ const routes = [
     path: '/Acceder',
     name: 'Acceder',
     component: Acceder
+  },
+  {
+    path: '/Acceso',
+    name: 'Acceso',
+    component: Acceso
   },
   {
     path: '/Registrarse',
@@ -33,13 +40,15 @@ const routes = [
     }
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+    path: '/subirProyecto',
+    name: 'subirProyecto',
+    component: subirProyecto
+  },
+  // {
+  //   path:'/edit/:id',
+  //   name: 'edit',
+  //   component: edit
+  // }
 ]
 
 const router = new VueRouter({
